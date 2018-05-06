@@ -51,7 +51,7 @@ public class Tab1Fragment extends Fragment{
             String url=params[0];
             try {
                 doc = Jsoup.connect(url).get();
-                words = doc.select("p");
+                words = doc.select("td[colspan=2]");
                 what1 = words.text();
             } catch (IOException e) {
                 // TODO Auto-generated catch block
@@ -66,7 +66,7 @@ public class Tab1Fragment extends Fragment{
             ArrayList<String> lunch = new ArrayList<String>();
             ListIterator<Element> postIt = result.listIterator();
 
-            for(int i = 0; i < 4; i++){
+            for(int i = 0; i < 6; i++){
                 if(postIt.hasNext()){
                     lunch.add(postIt.next().text());
                     System.out.println(lunch.get(i));
@@ -76,7 +76,7 @@ public class Tab1Fragment extends Fragment{
             String[] lunch1 = new String[lunch.size()];
             lunch.toArray(lunch1);
 
-            menu1 = "Öğle Yemeği: \n\n" + lunch1[0] + "\n\n" + lunch1[1] + "\n\n" + lunch1[2] + "\n\n" + lunch1[3] + "\n\n";
+            menu1 = lunch1[0] + "\n\n" + lunch1[1] + "\n\n" + lunch1[2] + "\n\n" + lunch1[3] + "\n\n" + lunch1[4] + "\n\n" + lunch1[5] + "\n\n";
             menu.setText(menu1);
         }
     }
