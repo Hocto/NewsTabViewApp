@@ -76,7 +76,7 @@ public class Tab1Fragment extends Fragment{
             String[] lunch1 = new String[lunch.size()];
             lunch.toArray(lunch1);
 
-            menu1 = lunch1[0] + "\n\n" + lunch1[1] + "\n\n" + lunch1[2] + "\n\n" + lunch1[3] + "\n\n" + lunch1[4] + "\n\n" + lunch1[5] + "\n\n";
+            menu1 = lunch1[1] + "\n\n" + lunch1[2] + "\n\n" + lunch1[3] + "\n\n" + lunch1[4] + "\n\n" + lunch1[5] + "\n\n";
             menu.setText(menu1);
         }
     }
